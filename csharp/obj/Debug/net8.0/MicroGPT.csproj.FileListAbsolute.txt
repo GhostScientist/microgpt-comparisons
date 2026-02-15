@@ -1,0 +1,14 @@
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/bin/Debug/net8.0/MicroGPT
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/bin/Debug/net8.0/MicroGPT.deps.json
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/bin/Debug/net8.0/MicroGPT.runtimeconfig.json
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/bin/Debug/net8.0/MicroGPT.dll
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/bin/Debug/net8.0/MicroGPT.pdb
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/MicroGPT.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/MicroGPT.AssemblyInfoInputs.cache
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/MicroGPT.AssemblyInfo.cs
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/MicroGPT.csproj.CoreCompileInputs.cache
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/MicroGPT.dll
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/refint/MicroGPT.dll
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/MicroGPT.pdb
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/MicroGPT.genruntimeconfig.cache
+/Users/dakotakim/Dev/SwiftCLI/swiftygpt/csharp/obj/Debug/net8.0/ref/MicroGPT.dll

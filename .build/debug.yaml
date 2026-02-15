@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "MicroGPT-arm64-apple-macosx26.0-debug.exe": ["<MicroGPT-arm64-apple-macosx26.0-debug.exe>"]
+  "MicroGPT-arm64-apple-macosx26.0-debug.module": ["<MicroGPT-arm64-apple-macosx26.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<MicroGPT-arm64-apple-macosx26.0-debug.exe>","<MicroGPT-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<MicroGPT-arm64-apple-macosx26.0-debug.exe>","<MicroGPT-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT":
+    is-mutated: true
+commands:
+  "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT-entitlement.plist"]
+    description: "Write auxiliary file /Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT-entitlement.plist"
+
+  "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/main.swift"]
+    outputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/sources"]
+    description: "Write auxiliary file /Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/sources"
+
+  "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main.swift.o"]
+    outputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.product/Objects.LinkFileList"
+
+  "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<MicroGPT-arm64-apple-macosx26.0-debug.exe>":
+    tool: phony
+    inputs: ["<MicroGPT-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    outputs: ["<MicroGPT-arm64-apple-macosx26.0-debug.exe>"]
+
+  "<MicroGPT-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main.swift.o","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/Modules/MicroGPT.swiftmodule"]
+    outputs: ["<MicroGPT-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.MicroGPT-arm64-apple-macosx26.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main.swift.o","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.product/Objects.LinkFileList"]
+    outputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/MicroGPT"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug","-o","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT","-module-name","MicroGPT","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_MicroGPT_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-5.5/macosx","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx10.13","-Xlinker","-add_ast_path","-Xlinker","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/Modules/MicroGPT.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.MicroGPT-arm64-apple-macosx26.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT-entitlement.plist"]
+    outputs: ["<MicroGPT-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/MicroGPT"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT-entitlement.plist","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT"]
+
+  "C.MicroGPT-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/main.swift","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/sources"]
+    outputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main.swift.o","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/Modules/MicroGPT.swiftmodule"]
+    description: "Compiling Swift Module 'MicroGPT' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","MicroGPT","-emit-dependencies","-emit-module","-emit-module-path","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/Modules/MicroGPT.swiftmodule","-output-file-map","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/output-file-map.json","-incremental","-c","@/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/sources","-I","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","MicroGPT_main","-color-diagnostics","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","swiftygpt"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Package.swift","/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

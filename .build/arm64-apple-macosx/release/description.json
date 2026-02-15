@@ -1,0 +1,219 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.MicroGPT-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build/sources",
+      "importPath" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "MicroGPT",
+      "moduleOutputPath" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/Modules/MicroGPT.swiftmodule",
+      "objects" : [
+        "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-whole-module-optimization",
+        "-num-threads",
+        "10",
+        "-serialize-diagnostics",
+        "-O",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "MicroGPT_main",
+        "-swift-version",
+        "5",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "swiftygpt"
+      ],
+      "outputFileMapPath" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/Modules/MicroGPT.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/main.swift"
+      ],
+      "tempsPath" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "MicroGPT" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "MicroGPT",
+      "-package-name",
+      "swiftygpt",
+      "-c",
+      "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/main.swift",
+      "-I",
+      "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-whole-module-optimization",
+      "-num-threads",
+      "10",
+      "-serialize-diagnostics",
+      "-O",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "MicroGPT_main",
+      "-swift-version",
+      "5",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "swiftygpt",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "MicroGPT" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build/sources"
+    },
+    "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/MicroGPT.product/Objects.LinkFileList"
+    },
+    "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}

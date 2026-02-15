@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/master.swiftdeps"
+  },
+  "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/Sources/MicroGPT/main.swift": {
+    "dependencies": "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main.d",
+    "object": "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main.swift.o",
+    "swiftmodule": "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main.swiftdeps",
+    "diagnostics": "/Users/dakotakim/Dev/SwiftCLI/swiftygpt/.build/arm64-apple-macosx/debug/MicroGPT.build/main.dia"
+  }
+}
